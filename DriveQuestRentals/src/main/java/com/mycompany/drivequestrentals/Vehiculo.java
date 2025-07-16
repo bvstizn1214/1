@@ -5,7 +5,7 @@ public abstract class Vehiculo implements ICalculable {
     protected String patente;
     protected String marca;
     protected String modelo;
-    protected int anio;
+    protected int año;
     protected double valorDiario;
     protected int diasArriendo;
     
@@ -14,12 +14,12 @@ public abstract class Vehiculo implements ICalculable {
     }
     
     // Constructor con parámetros
-    public Vehiculo(String patente, String marca, String modelo, int anio, 
+    public Vehiculo(String patente, String marca, String modelo, int año, 
                    double valorDiario, int diasArriendo) {
         this.patente = patente;
         this.marca = marca;
         this.modelo = modelo;
-        this.anio = anio;
+        this.año = año;
         this.valorDiario = valorDiario;
         this.diasArriendo = diasArriendo;
     }
@@ -53,11 +53,11 @@ public abstract class Vehiculo implements ICalculable {
     }
 
     public int getAnio() {
-        return anio;
+        return año;
     }
 
-    public void setAnio(int anio) {
-        this.anio = anio;
+    public void setAnio(int año) {
+        this.año = año;
     }
 
     public double getValorDiario() {

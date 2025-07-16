@@ -239,7 +239,7 @@ public class DriveQuestRentals {
             System.out.print("Modelo: ");
             String modelo = scanner.nextLine();
             System.out.print("Año: ");
-            int anio = Integer.parseInt(scanner.nextLine());
+            int año = Integer.parseInt(scanner.nextLine());
             System.out.print("Valor diario de arriendo: $");
             double valorDiario = Double.parseDouble(scanner.nextLine());
             System.out.print("Días de arriendo: ");
@@ -250,12 +250,12 @@ public class DriveQuestRentals {
             if (tipo == 1) {
                 System.out.print("Capacidad de carga (toneladas): ");
                 double capacidadCarga = Double.parseDouble(scanner.nextLine());
-                vehiculo = new VehiculoCarga(patente, marca, modelo, anio, valorDiario, 
+                vehiculo = new VehiculoCarga(patente, marca, modelo, año, valorDiario, 
                                            diasArriendo, capacidadCarga);
             } else {
                 System.out.print("Capacidad de pasajeros: ");
                 int capacidadPasajeros = Integer.parseInt(scanner.nextLine());
-                vehiculo = new VehiculoPasajeros(patente, marca, modelo, anio, valorDiario, 
+                vehiculo = new VehiculoPasajeros(patente, marca, modelo, año, valorDiario, 
                                                diasArriendo, capacidadPasajeros);
             }
             

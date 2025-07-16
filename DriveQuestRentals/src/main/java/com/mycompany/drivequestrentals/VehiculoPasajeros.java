@@ -9,9 +9,9 @@ public class VehiculoPasajeros extends Vehiculo {
     }
     
     // Constructor con parámetros
-    public VehiculoPasajeros(String patente, String marca, String modelo, int anio, 
+    public VehiculoPasajeros(String patente, String marca, String modelo, int año, 
                            double valorDiario, int diasArriendo, int capacidadPasajeros) {
-        super(patente, marca, modelo, anio, valorDiario, diasArriendo);
+        super(patente, marca, modelo, año, valorDiario, diasArriendo);
         this.capacidadPasajeros = capacidadPasajeros;
     }
     
@@ -21,7 +21,7 @@ public class VehiculoPasajeros extends Vehiculo {
                "Patente: " + patente + "\n" +
                "Marca: " + marca + "\n" +
                "Modelo: " + modelo + "\n" +
-               "Año: " + anio + "\n" +
+               "Año: " + año + "\n" +
                "Valor Diario: $" + valorDiario + "\n" +
                "Días de Arriendo: " + diasArriendo + "\n" +
                "Capacidad de Pasajeros: " + capacidadPasajeros + " personas";

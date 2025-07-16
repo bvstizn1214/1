@@ -12,6 +12,18 @@ public class GestionVehiculos {
     private static final String ARCHIVO_CSV = "vehiculos.csv";
     private static final Pattern PATRON_PATENTE = Pattern.compile("^[A-Za-z]{4}\\d{2}$");
     
+    public List<Vehiculo> listarVehiculosArriendoLargo() {
+        List<Vehiculo> vehiculosArriendoLargo = new ArrayList<>();
+        for (Vehiculo vehiculo : vehiculos) {
+            if (vehiculo.getDiasArriendo() > 7) { // Consideramos arriendo largo más de 7 días
+                vehiculosArriendoLargo.add(vehiculo);
+            }
+        }
+        return vehiculosArriendoLargo;
+    }
+    
+    
+    
     public GestionVehiculos() {
         this.vehiculos = new CopyOnWriteArrayList<>();
         cargarDatos();
@@ -43,7 +55,7 @@ public class GestionVehiculos {
                     String patente = datos[1].trim();
                     String marca = datos[2].trim();
                     String modelo = datos[3].trim();
-                    int anio = Integer.parseInt(datos[4].trim());
+                    int año = Integer.parseInt(datos[4].trim());
                     double valorDiario = Double.parseDouble(datos[5].trim());
                     int diasArriendo = Integer.parseInt(datos[6].trim());
                     
@@ -62,11 +74,11 @@ public class GestionVehiculos {
                     Vehiculo vehiculo;
                     if (tipo.equalsIgnoreCase("C")) {
                         double capacidadCarga = Double.parseDouble(datos[7].trim());
-                        vehiculo = new VehiculoCarga(patente, marca, modelo, anio, 
+                        vehiculo = new VehiculoCarga(patente, marca, modelo, año, 
                                                    valorDiario, diasArriendo, capacidadCarga);
                     } else if (tipo.equalsIgnoreCase("P")) {
                         int capacidadPasajeros = Integer.parseInt(datos[7].trim());
-                        vehiculo = new VehiculoPasajeros(patente, marca, modelo, anio, 
+                        vehiculo = new VehiculoPasajeros(patente, marca, modelo, año, 
                                                        valorDiario, diasArriendo, capacidadPasajeros);
                     } else {
                         System.err.println("CSV: Tipo de vehículo inválido ignorado: " + tipo);
@@ -134,7 +146,7 @@ public class GestionVehiculos {
                     String patente = datos[1].trim().toUpperCase();
                     String marca = datos[2].trim();
                     String modelo = datos[3].trim();
-                    int anio = Integer.parseInt(datos[4].trim());
+                    int año = Integer.parseInt(datos[4].trim());
                     double valorDiario = Double.parseDouble(datos[5].trim());
                     int diasArriendo = Integer.parseInt(datos[6].trim());
                     
@@ -143,7 +155,7 @@ public class GestionVehiculos {
                     System.out.println("- Patente: " + patente);
                     System.out.println("- Marca: " + marca);
                     System.out.println("- Modelo: " + modelo);
-                    System.out.println("- Año: " + anio);
+                    System.out.println("- Año: " + año);
                     System.out.println("- Valor Diario: " + valorDiario);
                     System.out.println("- Días Arriendo: " + diasArriendo);
                     
@@ -168,12 +180,12 @@ public class GestionVehiculos {
                     if (tipo.equalsIgnoreCase("C")) {
                         double capacidadCarga = Double.parseDouble(datos[7].trim());
                         System.out.println("- Capacidad de carga: " + capacidadCarga + " toneladas");
-                        vehiculo = new VehiculoCarga(patente, marca, modelo, anio, 
+                        vehiculo = new VehiculoCarga(patente, marca, modelo, año, 
                                                    valorDiario, diasArriendo, capacidadCarga);
                     } else if (tipo.equalsIgnoreCase("P")) {
                         int capacidadPasajeros = Integer.parseInt(datos[7].trim());
                         System.out.println("- Capacidad de pasajeros: " + capacidadPasajeros + " personas");
-                        vehiculo = new VehiculoPasajeros(patente, marca, modelo, anio, 
+                        vehiculo = new VehiculoPasajeros(patente, marca, modelo, año, 
                                                        valorDiario, diasArriendo, capacidadPasajeros);
                     } else {
                         System.out.println("Advertencia: Tipo de vehículo inválido (debe ser C o P): " + tipo);
@@ -207,6 +219,8 @@ public class GestionVehiculos {
         
         return vehiculosCargados;
     }
+           
+           
 
     // Método para verificar si existe una patente
     public boolean existePatente(String patente) {
@@ -324,17 +338,17 @@ public class GestionVehiculos {
                 String patente = datos[1];
                 String marca = datos[2];
                 String modelo = datos[3];
-                int anio = Integer.parseInt(datos[4]);
+                int año = Integer.parseInt(datos[4]);
                 double valorDiario = Double.parseDouble(datos[5]);
                 int diasArriendo = Integer.parseInt(datos[6]);
                 
                 if (tipo.equals("C")) {
                     double capacidadCarga = Double.parseDouble(datos[7]);
-                    vehiculos.add(new VehiculoCarga(patente, marca, modelo, anio, 
+                    vehiculos.add(new VehiculoCarga(patente, marca, modelo, año, 
                                                   valorDiario, diasArriendo, capacidadCarga));
                 } else {
                     int capacidadPasajeros = Integer.parseInt(datos[7]);
-                    vehiculos.add(new VehiculoPasajeros(patente, marca, modelo, anio, 
+                    vehiculos.add(new VehiculoPasajeros(patente, marca, modelo, año, 
                                                       valorDiario, diasArriendo, capacidadPasajeros));
                 }
             }
