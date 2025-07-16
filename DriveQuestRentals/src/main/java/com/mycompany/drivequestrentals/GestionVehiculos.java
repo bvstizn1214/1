@@ -227,7 +227,10 @@ public class GestionVehiculos {
         return PATRON_PATENTE.matcher(patente.toUpperCase()).matches();
     }
     
-    
+    public void limpiarDatosEnMemoria() {
+    vehiculos.clear(); // Limpia la lista en memoria
+    System.out.println("Datos en memoria limpiados. Los archivos de persistencia se mantienen intactos.");
+}
     
    // Método modificado para agregar un vehículo
     public synchronized boolean agregarVehiculo(Vehiculo vehiculo) {

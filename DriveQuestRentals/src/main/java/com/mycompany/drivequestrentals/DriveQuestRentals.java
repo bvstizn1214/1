@@ -13,43 +13,46 @@ public class DriveQuestRentals {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int opcion;
-        
-        do {
-            try {
-                // Menú principal más limpio y claro
-                System.out.println("\n=== Sistema DriveQuest Rentals ===");
-                System.out.println("1. Gestión de Vehículos");
-                System.out.println("2. Facturación");
-                System.out.println("3. Salir");
-                System.out.print("\nSeleccione una opción: ");
-                
-                opcion = Integer.parseInt(scanner.nextLine());
-                
-                switch (opcion) {
-                    case 1:
-                        mostrarMenuGestionVehiculos();
-                        break;
-                    case 2:
-                        mostrarMenuFacturacion();
-                        break;
-                    case 3:
-                        System.out.println("¡Gracias por usar el Sistema DriveQuest Rentals!");
-                        return;
-                    default:
-                        System.out.println("Opción inválida. Por favor, intente nuevamente.");
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Error: Por favor, ingrese un número válido.");
-                opcion = 0;
-            } catch (Exception e) {
-                System.out.println("Error: " + e.getMessage());
-                opcion = 0;
+    int opcion;
+    
+    do {
+        try {
+            System.out.println("\n=== Sistema DriveQuest Rentals ===");
+            System.out.println("1. Gestión de Vehículos");
+            System.out.println("2. Facturación");
+            System.out.println("3. Limpiar datos en memoria"); // Nueva opción
+            System.out.println("4. Salir");
+            System.out.print("\nSeleccione una opción: ");
+            
+            opcion = Integer.parseInt(scanner.nextLine());
+            
+            switch (opcion) {
+                case 1:
+                    mostrarMenuGestionVehiculos();
+                    break;
+                case 2:
+                    mostrarMenuFacturacion();
+                    break;
+                case 3:
+                    gestionVehiculos.limpiarDatosEnMemoria();// Llama al nuevo método
+                    break;
+                case 4:
+                    System.out.println("¡Gracias por usar el Sistema DriveQuest Rentals!");
+                    return;
+                default:
+                    System.out.println("Opción inválida. Por favor, intente nuevamente.");
             }
-        } while (opcion != 3);
-        
-        scanner.close();
-    }
+        } catch (NumberFormatException e) {
+            System.out.println("Error: Por favor, ingrese un número válido.");
+            opcion = 0;
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+            opcion = 0;
+        }
+    } while (opcion != 4);
+    
+    scanner.close();
+}
     
     private static void mostrarMenuGestionVehiculos() {
         int opcion;
@@ -431,4 +434,5 @@ public class DriveQuestRentals {
             System.out.println("Error: Por favor, ingrese un número válido.");
         }
     }
+   
 }
