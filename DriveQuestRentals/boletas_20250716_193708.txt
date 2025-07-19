@@ -1,0 +1,106 @@
+=== REGISTRO DE BOLETAS DE ARRIENDO ===
+Fecha de generación: 2025-07-16 19:37:08
+Usuario: basti
+----------------------------------------
+
+BOLETA N°: 1
+Fecha: 2025-07-16
+----------------------------------------
+DATOS DEL VEHÍCULO:
+Vehículo de Carga:
+Patente: ABCD12
+Marca: Toyota
+Modelo: Hilux
+Año: 2022
+Valor Diario: $50000.0
+Días de Arriendo: 5
+Capacidad de Carga: 2.5 toneladas
+----------------------------------------
+CÁLCULO DEL ARRIENDO:
+Descuento Vehículo de Carga (7%)
+Valor Diario: $50.000
+Días de Arriendo: 5
+Subtotal: $250.000
+Descuento: $17.500
+Subtotal con Descuento: $232.500
+IVA (19%): $44.175
+Total: $276.675
+========================================
+
+BOLETA N°: 2
+Fecha: 2025-07-16
+----------------------------------------
+DATOS DEL VEHÍCULO:
+Vehículo de Pasajeros:
+Patente: WXYZ34
+Marca: Hyundai
+Modelo: H1
+Año: 2023
+Valor Diario: $45000.0
+Días de Arriendo: 3
+Capacidad de Pasajeros: 12 personas
+----------------------------------------
+CÁLCULO DEL ARRIENDO:
+Descuento Vehículo de Pasajeros (12%)
+Valor Diario: $45.000
+Días de Arriendo: 3
+Subtotal: $135.000
+Descuento: $16.200
+Subtotal con Descuento: $118.800
+IVA (19%): $22.572
+Total: $141.372
+========================================
+
+BOLETA N°: 3
+Fecha: 2025-07-16
+----------------------------------------
+DATOS DEL VEHÍCULO:
+Vehículo de Carga:
+Patente: QWER12
+Marca: Kia
+Modelo: Carens
+Año: 2012
+Valor Diario: $20000.0
+Días de Arriendo: 4
+Capacidad de Carga: 5.0 toneladas
+----------------------------------------
+CÁLCULO DEL ARRIENDO:
+Descuento Vehículo de Carga (7%)
+Valor Diario: $20.000
+Días de Arriendo: 4
+Subtotal: $80.000
+Descuento: $5.600
+Subtotal con Descuento: $74.400
+IVA (19%): $14.136
+Total: $88.536
+========================================
+
+BOLETA N°: 4
+Fecha: 2025-07-16
+----------------------------------------
+DATOS DEL VEHÍCULO:
+Vehículo de Pasajeros:
+Patente: QWEQ12
+Marca: Nissan
+Modelo: Tiida
+Año: 2011
+Valor Diario: $30000.0
+Días de Arriendo: 7
+Capacidad de Pasajeros: 10 personas
+----------------------------------------
+CÁLCULO DEL ARRIENDO:
+Descuento Vehículo de Pasajeros (12%)
+Valor Diario: $30.000
+Días de Arriendo: 7
+Subtotal: $210.000
+Descuento: $25.200
+Subtotal con Descuento: $184.800
+IVA (19%): $35.112
+Total: $219.912
+========================================
+
+RESUMEN GENERAL
+----------------------------------------
+Total Boletas Generadas: 4
+Monto Total: $726.495
+========================================

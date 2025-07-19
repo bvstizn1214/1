@@ -52,11 +52,11 @@ public abstract class Vehiculo implements ICalculable {
         this.modelo = modelo;
     }
 
-    public int getAnio() {
+    public int getaño() {
         return año;
     }
 
-    public void setAnio(int año) {
+    public void setaño(int año) {
         this.año = año;
     }
 

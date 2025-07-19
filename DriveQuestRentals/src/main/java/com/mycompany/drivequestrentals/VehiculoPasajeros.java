@@ -3,7 +3,7 @@ package com.mycompany.drivequestrentals;
 public class VehiculoPasajeros extends Vehiculo {
     private int capacidadPasajeros;
     
-    // Constructor vacío
+    
     public VehiculoPasajeros() {
         super();
     }
